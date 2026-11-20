@@ -1,0 +1,55 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "torhy",
+  "version": "1.0.0",
+  "description": "Search and analyze Ukrainian Prozorro and EU TED public tenders: notices, documents, award prices, alerts.",
+  "author": {
+    "name": "Bovsanka",
+    "email": "support@torhy.com.ua",
+    "url": "https://bovsanka.com"
+  },
+  "homepage": "https://torhy.com.ua/en",
+  "repository": "https://github.com/WinTende/torhy-mcp",
+  "license": "MIT",
+  "keywords": [
+    "tenders",
+    "public-procurement",
+    "prozorro",
+    "ted",
+    "ukraine",
+    "eu",
+    "cpv",
+    "mcp"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Torhy",
+        "shortDescription": "Prozorro and EU TED tenders",
+        "longDescription": "Torhy brings public procurement data from Ukraine's Prozorro system and the EU's Tenders Electronic Daily (TED) into your assistant, so suppliers can find the right tenders and decide faster.\n\nFind tenders. Search open Prozorro tenders by keywords, CPV codes, region, buyer, budget and deadline, and search TED notices across EU countries. A plain request such as \"road repair in Kyiv region over 1M UAH, deadline after Friday\" is turned into the right filters.\n\nUnderstand a tender. Open the full tender with lots, criteria and deadlines and read the text of its documents: get a summary of the requirements, the list of documents to submit and the risks to check.\n\nPrice a bid. See who won similar tenders and at what price, get a price benchmark for a CPV code, and look at the history of a buyer or a competitor.\n\nNever miss one. Save your company profile, create alerts for new tenders that match it and keep a watch list of the tenders you follow.\n\nWho it is for: suppliers, tender managers, bid consultants and analysts who work with Ukrainian and EU public procurement.\n\nLimits: data comes from the official open APIs of Prozorro and TED and can lag behind the source by a few minutes. Torhy does not submit bids, sign documents or pay fees on your behalf, and it does not give legal advice. Sign-in with a Torhy account is required.",
+        "developerName": "Bovsanka",
+        "category": "Productivity",
+        "capabilities": [
+          "Search Prozorro and EU TED tenders",
+          "Read tender documents",
+          "Analyze award prices, buyers and competitors",
+          "Manage tender alerts and a watch list"
+        ],
+        "websiteURL": "https://torhy.com.ua/en",
+        "supportURL": "https://torhy.com.ua/en/contact",
+        "privacyPolicyURL": "https://torhy.com.ua/en/legal/privacy",
+        "termsOfServiceURL": "https://torhy.com.ua/en/legal/terms",
+        "defaultPrompt": [
+          "Find open Prozorro tenders for medical gloves in Lviv region.",
+          "Who won road repair tenders in Kyiv region this year, and at what price?",
+          "Find TED notices for drone services in Poland and Lithuania."
+        ],
+        "brandColor": "#047857",
+        "brandColorDark": "#34D399",
+        "composerIcon": "./assets/icon.svg",
+        "logo": "./assets/icon.svg"
+      },
+      "onboardingSkill": "./skills/get-started/SKILL.md"
+    }
+  }
+}
